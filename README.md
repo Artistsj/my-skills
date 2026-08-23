@@ -10,6 +10,7 @@
 | brainstorming | obra | https://github.com/obra/superpowers | 创意头脑风暴技能，在实现任何功能前先探索需求、设计方案、获取用户批准，支持 spike/bounded/architectural 三种路径 |
 | frontend-slides | affaan-m | https://github.com/affaan-m/ECC | 创建动画丰富的 HTML 演示文稿，支持从零创建或 PPT/PPTX 转换，内置 12 种风格预设 |
 | skill-creator | anthropics | https://github.com/anthropics/skills | 创建、修改和优化 Skill 的元技能，支持测试用例、评估基准、描述优化 |
+| ppt-generation | bytedance | https://github.com/bytedance/deer-flow | AI 图片生成 + PPTX 组装，逐张生成幻灯片图片并合成 PowerPoint 文件 |
 
 ## 目录结构
 
@@ -41,6 +42,9 @@
     ├── eval-viewer/             # 评估结果查看器
     ├── references/              # Schema 文档
     └── scripts/                 # 评估、基准、描述优化脚本
+└── ppt-generation/              # PPT 生成技能（AI 图片 + PPTX 组装）
+    ├── SKILL.md
+    └── scripts/generate.py      # PPTX 组装脚本
 ```
 
 ## 如何在新设备上使用
