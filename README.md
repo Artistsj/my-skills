@@ -32,6 +32,7 @@
 | diagnosing-bugs | mattpocock | https://github.com/mattpocock/skills | 硬 bug 诊断 6 阶段流程，先建反馈回路再假设，含 HITL 脚本模板、密钥脱敏、回归测试 |
 | codebase-design | mattpocock | https://github.com/mattpocock/skills | 深模块设计词汇表，定义 module/interface/seam/adapter/depth，含深化指南和并行设计接口方法 |
 | tdd | mattpocock | https://github.com/mattpocock/skills | 测试驱动开发，红绿重构循环，垂直切片 tracer bullet，含好坏测试对比和 mock 指南 |
+| improve-codebase-architecture | mattpocock | https://github.com/mattpocock/skills | 架构审查，扫描浅模块生成 HTML 可视化报告，然后 grilling 深化选定候选 |
 
 ## 目录结构
 
@@ -173,6 +174,10 @@
     ├── SKILL.md                   # 红绿重构 + 垂直切片 + 反模式
     ├── tests.md                   # 好坏测试示例对比
     ├── mocking.md                 # Mock 指南：只 mock 系统边界
+    └── agents/openai.yaml         # Codex 平台元数据
+└── improve-codebase-architecture/ # 架构审查
+    ├── SKILL.md                   # 3 步流程：探索→HTML 报告→grilling 深化
+    ├── HTML-REPORT.md             # HTML 报告模板：Tailwind + Mermaid + 图案
     └── agents/openai.yaml         # Codex 平台元数据
 ```
 
