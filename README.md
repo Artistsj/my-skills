@@ -17,6 +17,7 @@
 | adversarial-ux-test | NousResearch | https://github.com/NousResearch/hermes-agent | 对抗式 UX 测试，扮演最挑剔用户发现体验痛点，经实用主义过滤后输出可执行工单 |
 | risk-assessment | anthropics | https://github.com/anthropics/knowledge-work-plugins | 运营风险评估，识别、评估、规划缓解措施，含风险矩阵、6 大风险类别、风险登记册格式 |
 | investor-materials | affaan-m | https://github.com/affaan-m/ECC | 投资人材料生成，创建 pitch deck、one-pager、投资人备忘录、财务模型、加速器申请，确保多份融资材料数据一致 |
+| weather-reporter | awslabs | https://github.com/awslabs/agentcore-samples | 天气信息格式化，用 emoji 展示天气、双温标显示、基于天气的活动推荐和穿衣建议 |
 
 ## 目录结构
 
@@ -78,6 +79,8 @@
 └── investor-materials/           # 投资人材料技能
     ├── SKILL.md
     └── agents/openai.yaml
+└── weather-reporter/             # 天气报告技能
+    └── SKILL.md
 ```
 
 ## 如何在新设备上使用
