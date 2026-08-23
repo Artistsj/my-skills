@@ -20,6 +20,7 @@
 | weather-reporter | awslabs | https://github.com/awslabs/agentcore-samples | 天气信息格式化，用 emoji 展示天气、双温标显示、基于天气的活动推荐和穿衣建议 |
 | diagram-maker | openclaw | https://github.com/openclaw/openclaw | 图表绘制，支持 SVG/HTML 架构图和 Excalidraw 手绘白板，自动选择布局和语义配色 |
 | accessibility | affaan-m | https://github.com/affaan-m/ECC | WCAG 2.2 Level AA 无障碍设计标准，跨平台（Web/iOS/Android）ARIA 映射、审计检查清单、反模式避坑 |
+| fortune | ai-freer | https://github.com/ai-freer/fortune-skill | 中国传统命理分析（八字+紫微斗数），对话式收集出生信息，排盘脚本获取精确数据，结合九本经典典籍综合分析 |
 
 ## 目录结构
 
@@ -86,6 +87,40 @@
 └── diagram-maker/               # 图表绘制技能
     ├── SKILL.md
     └── references/               # SVG 模板 + Excalidraw 模式参考
+└── fortune/                      # 中国传统命理分析技能（八字+紫微斗数）
+    ├── SKILL.md                   # 完整交互流程与分析框架（41KB）
+    ├── AGENTS.md                  # Codex agent 指引
+    ├── CLAUDE.md                  # Claude Code agent 指引
+    ├── INSTALL.md                 # 分平台安装指引
+    ├── install.sh                 # 一键安装脚本
+    ├── package.json               # Node.js 依赖（iztro, lunar-javascript）
+    ├── requirements.txt           # Python 依赖（lunar-python 等）
+    ├── scripts/                   # 19 个排盘/报告/验证脚本
+    │   ├── bazi-chart.mjs         # 八字排盘（lunar-javascript）
+    │   ├── ziwei-chart.mjs        # 紫微斗数排盘（iztro）
+    │   ├── bazi-classic.py        # 三命通会论断（china-testing/bazi）
+    │   ├── time-normalize.mjs     # 真太阳时校正
+    │   ├── fortune-report-data.mjs # 报告数据聚合
+    │   ├── hecan-summary.mjs      # 结构化合参 v2 判断卡片
+    │   ├── hecan-audit.mjs       # 合参审计
+    │   ├── rule-matcher.mjs      # 经典规则命中匹配
+    │   ├── report-draft.mjs       # 报告草稿生成
+    │   ├── report-qa.mjs         # 报告质量检查
+    │   ├── privacy-check.mjs     # 隐私检查
+    │   └── ...                    # 其他辅助脚本
+    ├── references/                # 命理知识库（11 个文件）
+    │   ├── classical-texts.md     # 九本经典典籍核心规则摘要
+    │   ├── classical-rules.json   # 调候/格局/病药结构化规则
+    │   ├── bazi-guide.md          # 八字命理分析指南
+    │   ├── ziwei-guide.md        # 紫微斗数解盘指南
+    │   ├── wuxing-tables.md      # 五行/天干地支/十神参考表
+    │   ├── methodology-framework.json # 方法论核对框架
+    │   ├── report-templates.json  # 报告模板骨架
+    │   └── ...                    # 其他参考文件
+    └── vendor/bazi/              # china-testing/bazi 源码
+        ├── bazi.py, sizi.py, ...  # 排盘+分析 Python 代码
+        ├── books/                 # 子平真诠、穷通宝鉴等典籍
+        └── examples/             # 格局示例
 ```
 
 ## 如何在新设备上使用
