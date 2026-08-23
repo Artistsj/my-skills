@@ -27,6 +27,7 @@
 | triage | mattpocock | https://github.com/mattpocock/skills | GitHub issue/PR 分诊状态机，分类+状态角色、验证复现、grilling 充实、agent brief 生成 |
 | domain-modeling | mattpocock | https://github.com/mattpocock/skills | 项目领域模型构建，维护 CONTEXT.md 术语表和 ADR 决策记录，支持单/多上下文仓库 |
 | handoff | mattpocock | https://github.com/mattpocock/skills | 将当前对话压缩成交接文档，含推荐 skill、敏感信息脱敏，供下一个 agent 无缝接手 |
+| prototype | mattpocock | https://github.com/mattpocock/skills | 一次性原型验证，逻辑原型（HTML 状态机演示）+ UI 原型（多变体路由切换），验证后吸收决策、丢弃代码 |
 
 ## 目录结构
 
@@ -147,6 +148,11 @@
     └── agents/openai.yaml         # Codex 平台元数据
 └── handoff/                        # 对话交接文档生成
     ├── SKILL.md                   # 压缩对话摘要+推荐 skill+脱敏
+    └── agents/openai.yaml         # Codex 平台元数据
+└── prototype/                      # 一次性原型验证
+    ├── SKILL.md                   # 两条分支选择+通用规则（丢弃式、零依赖）
+    ├── LOGIC.md                   # 逻辑原型：单 HTML 文件状态机演示+引导走查
+    ├── UI.md                      # UI 原型：多变体路由切换+浮动底栏
     └── agents/openai.yaml         # Codex 平台元数据
 ```
 
