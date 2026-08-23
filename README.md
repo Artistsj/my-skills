@@ -25,6 +25,7 @@
 | grilling | mattpocock | https://github.com/mattpocock/skills | relentless interview 核心引擎，设计树+frontier 逐轮拷问，自动分离事实查找与决策，直到达成共识 |
 | find-skills | vercel-labs | https://github.com/vercel-labs/skills | 帮助发现和安装 agent skills，先查 skills.sh 排行榜，再 CLI 搜索，验证质量后推荐安装 |
 | triage | mattpocock | https://github.com/mattpocock/skills | GitHub issue/PR 分诊状态机，分类+状态角色、验证复现、grilling 充实、agent brief 生成 |
+| domain-modeling | mattpocock | https://github.com/mattpocock/skills | 项目领域模型构建，维护 CONTEXT.md 术语表和 ADR 决策记录，支持单/多上下文仓库 |
 
 ## 目录结构
 
@@ -137,6 +138,11 @@
     ├── SKILL.md                   # 状态机角色、分诊流程、needs-info 模板
     ├── AGENT-BRIEF.md              # agent brief 写作指南（持久性、行为式、验收标准）
     ├── OUT-OF-SCOPE.md            # .out-of-scope/ 拒绝请求知识库规范
+    └── agents/openai.yaml         # Codex 平台元数据
+└── domain-modeling/               # 项目领域模型构建
+    ├── SKILL.md                   # 术语表+ADR 维护方法论
+    ├── ADR-FORMAT.md              # ADR 写作格式与触发条件
+    ├── CONTEXT-FORMAT.md         # CONTEXT.md 术语表格式（单/多上下文）
     └── agents/openai.yaml         # Codex 平台元数据
 ```
 
