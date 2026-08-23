@@ -26,6 +26,7 @@
 | find-skills | vercel-labs | https://github.com/vercel-labs/skills | 帮助发现和安装 agent skills，先查 skills.sh 排行榜，再 CLI 搜索，验证质量后推荐安装 |
 | triage | mattpocock | https://github.com/mattpocock/skills | GitHub issue/PR 分诊状态机，分类+状态角色、验证复现、grilling 充实、agent brief 生成 |
 | domain-modeling | mattpocock | https://github.com/mattpocock/skills | 项目领域模型构建，维护 CONTEXT.md 术语表和 ADR 决策记录，支持单/多上下文仓库 |
+| handoff | mattpocock | https://github.com/mattpocock/skills | 将当前对话压缩成交接文档，含推荐 skill、敏感信息脱敏，供下一个 agent 无缝接手 |
 
 ## 目录结构
 
@@ -143,6 +144,9 @@
     ├── SKILL.md                   # 术语表+ADR 维护方法论
     ├── ADR-FORMAT.md              # ADR 写作格式与触发条件
     ├── CONTEXT-FORMAT.md         # CONTEXT.md 术语表格式（单/多上下文）
+    └── agents/openai.yaml         # Codex 平台元数据
+└── handoff/                        # 对话交接文档生成
+    ├── SKILL.md                   # 压缩对话摘要+推荐 skill+脱敏
     └── agents/openai.yaml         # Codex 平台元数据
 ```
 
