@@ -34,6 +34,7 @@
 | tdd | mattpocock | https://github.com/mattpocock/skills | 测试驱动开发，红绿重构循环，垂直切片 tracer bullet，含好坏测试对比和 mock 指南 |
 | improve-codebase-architecture | mattpocock | https://github.com/mattpocock/skills | 架构审查，扫描浅模块生成 HTML 可视化报告，然后 grilling 深化选定候选 |
 | grill-with-docs | mattpocock | https://github.com/mattpocock/skills | 入口 skill，同时调用 grilling + domain-modeling，拷问设计的同时产出 ADR 和术语表 |
+| market-daily-review | quantskills | https://github.com/quantskills/skill-market-daily-review | A股每日收盘复盘，从 Pandadata 获取数据，生成包含指数、市场宽度、行业概念、龙虎榜、北向资金等内容的中文报告 |
 
 ## 目录结构
 
@@ -183,6 +184,17 @@
 └── grill-with-docs/              # 拷问 + 文档入口
     ├── SKILL.md                   # 调用 grilling + domain-modeling
     └── agents/openai.yaml         # Codex 平台元数据
+└── market-daily-review/          # A股每日收盘复盘
+    ├── SKILL.md                   # 复盘流程定义（指数→宽度→热点→资金）
+    ├── references/
+    │   ├── pandadata-map.md       # Pandadata 接口映射
+    │   └── report-template.md     # 复盘报告模板
+    ├── scripts/
+    │   └── validate_report.py     # 报告校验脚本
+    └── agents/
+        ├── openai.yaml            # OpenAI 平台元数据
+        ├── cursor-rule.mdc        # Cursor 规则
+        └── portable-loader.md    # 便携加载器
 ```
 
 ## 如何在新设备上使用
