@@ -33,6 +33,7 @@
 | codebase-design | mattpocock | https://github.com/mattpocock/skills | 深模块设计词汇表，定义 module/interface/seam/adapter/depth，含深化指南和并行设计接口方法 |
 | tdd | mattpocock | https://github.com/mattpocock/skills | 测试驱动开发，红绿重构循环，垂直切片 tracer bullet，含好坏测试对比和 mock 指南 |
 | improve-codebase-architecture | mattpocock | https://github.com/mattpocock/skills | 架构审查，扫描浅模块生成 HTML 可视化报告，然后 grilling 深化选定候选 |
+| grill-with-docs | mattpocock | https://github.com/mattpocock/skills | 入口 skill，同时调用 grilling + domain-modeling，拷问设计的同时产出 ADR 和术语表 |
 
 ## 目录结构
 
@@ -178,6 +179,9 @@
 └── improve-codebase-architecture/ # 架构审查
     ├── SKILL.md                   # 3 步流程：探索→HTML 报告→grilling 深化
     ├── HTML-REPORT.md             # HTML 报告模板：Tailwind + Mermaid + 图案
+    └── agents/openai.yaml         # Codex 平台元数据
+└── grill-with-docs/              # 拷问 + 文档入口
+    ├── SKILL.md                   # 调用 grilling + domain-modeling
     └── agents/openai.yaml         # Codex 平台元数据
 ```
 
