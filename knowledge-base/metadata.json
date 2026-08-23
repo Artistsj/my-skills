@@ -1,0 +1,10 @@
+{
+  "book_title": "围棋（第一册）",
+  "author": "邱百瑞",
+  "publisher": "中国统计出版社",
+  "isbn": "7-5037-3010-2/G.74",
+  "total_pages": 234,
+  "processed_pages": 10,
+  "ocr_engine": "PaddleOCR PP-OCRv6 (oneDNN disabled)",
+  "dpi": 300
+}
