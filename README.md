@@ -35,6 +35,8 @@
 | improve-codebase-architecture | mattpocock | https://github.com/mattpocock/skills | 架构审查，扫描浅模块生成 HTML 可视化报告，然后 grilling 深化选定候选 |
 | grill-with-docs | mattpocock | https://github.com/mattpocock/skills | 入口 skill，同时调用 grilling + domain-modeling，拷问设计的同时产出 ADR 和术语表 |
 | market-daily-review | quantskills | https://github.com/quantskills/skill-market-daily-review | A股每日收盘复盘，从 Pandadata 获取数据，生成包含指数、市场宽度、行业概念、龙虎榜、北向资金等内容的中文报告 |
+| a-share-stock-dossier | quantskills | https://github.com/quantskills/skill-a-share-stock-dossier | A股个股尽调报告，输入股票代码生成包含公司画像、财务、分红资本运作、股东行为、质押解禁减持风险、资金面的可溯源中文报告 |
+| futures-deepview-analyst | quantskills | https://github.com/quantskills/skill-futures-deepview-analyst | 期货 DeepView 综合研判，覆盖席位持仓博弈、基差期限结构、仓单库存、虚实盘比、现货利润、跨期套利扫描 |
 
 ## 目录结构
 
@@ -191,6 +193,22 @@
     │   └── report-template.md     # 复盘报告模板
     ├── scripts/
     │   └── validate_report.py     # 报告校验脚本
+    └── agents/
+        ├── openai.yaml            # OpenAI 平台元数据
+        ├── cursor-rule.mdc        # Cursor 规则
+        └── portable-loader.md    # 便携加载器
+└── a-share-stock-dossier/         # A股个股尽调
+    ├── SKILL.md                   # 尽调流程定义（公司→财务→风险→资金）
+    ├── references/
+    │   └── dossier-guide.md       # API 映射、风险规则、报告蓝图
+    └── agents/
+        ├── openai.yaml            # OpenAI 平台元数据
+        ├── cursor-rule.mdc        # Cursor 规则
+        └── portable-loader.md    # 便携加载器
+└── futures-deepview-analyst/      # 期货 DeepView 研判
+    ├── SKILL.md                   # 研判流程（席位→基差→库存→套利）
+    ├── references/
+    │   └── analysis-playbook.md   # 信号配方、报告骨架、空数据处理
     └── agents/
         ├── openai.yaml            # OpenAI 平台元数据
         ├── cursor-rule.mdc        # Cursor 规则
