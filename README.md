@@ -14,6 +14,7 @@
 | vercel-react-best-practices | vercel-labs | https://github.com/vercel-labs/agent-skills | React/Next.js 性能优化规则集，70 条规则覆盖 8 个类别（异步瀑布、包体积、SSR、重渲染等） |
 | docx | anthropics | https://github.com/anthropics/skills | Word 文档创建、编辑、分析，支持 tracked changes、批注、XSD 验证、pandoc 转换 |
 | frontend-design | anthropics | https://github.com/anthropics/skills | 前端视觉设计指导，强调独特性、排版、配色、动效的刻意选择，避免模板化默认风格 |
+| adversarial-ux-test | NousResearch | https://github.com/NousResearch/hermes-agent | 对抗式 UX 测试，扮演最挑剔用户发现体验痛点，经实用主义过滤后输出可执行工单 |
 
 ## 目录结构
 
@@ -68,6 +69,8 @@
 └── frontend-design/              # 前端视觉设计技能
     ├── SKILL.md
     └── LICENSE.txt
+└── adversarial-ux-test/          # 对抗式 UX 测试技能
+    └── SKILL.md
 ```
 
 ## 如何在新设备上使用
