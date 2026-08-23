@@ -12,6 +12,7 @@
 | skill-creator | anthropics | https://github.com/anthropics/skills | 创建、修改和优化 Skill 的元技能，支持测试用例、评估基准、描述优化 |
 | ppt-generation | bytedance | https://github.com/bytedance/deer-flow | AI 图片生成 + PPTX 组装，逐张生成幻灯片图片并合成 PowerPoint 文件 |
 | vercel-react-best-practices | vercel-labs | https://github.com/vercel-labs/agent-skills | React/Next.js 性能优化规则集，70 条规则覆盖 8 个类别（异步瀑布、包体积、SSR、重渲染等） |
+| docx | anthropics | https://github.com/anthropics/skills | Word 文档创建、编辑、分析，支持 tracked changes、批注、XSD 验证、pandoc 转换 |
 
 ## 目录结构
 
@@ -51,6 +52,18 @@
     ├── AGENTS.md                 # 编译后的完整规则文档
     ├── metadata.json             # 版本元数据
     └── rules/                    # 70 条规则文件（8 个类别）
+└── docx/                          # Word 文档技能
+    ├── SKILL.md
+    ├── LICENSE.txt                # 专有许可证
+    └── scripts/                  # 工具链
+        ├── accept_changes.py      # 接受修订
+        ├── comment.py             # 批注
+        ├── merge_runs.py          # 合并文本片段
+        └── office/                # Office 共享模块
+            ├── soffice.py         # LibreOffice 封装
+            ├── validate.py        # XSD 验证器
+            ├── validators/        # docx/pptx/redlining 验证器
+            └── schemas/           # ISO IEC29500 XML Schema
 ```
 
 ## 如何在新设备上使用
