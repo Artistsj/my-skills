@@ -8,6 +8,7 @@
 | --- | --- | --- | --- |
 | ui-ux-pro-max | nextlevelbuilder | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | UI/UX 设计智能技能，覆盖风格、配色、字体、UX 规则、动画预设、图表推荐等 |
 | brainstorming | obra | https://github.com/obra/superpowers | 创意头脑风暴技能，在实现任何功能前先探索需求、设计方案、获取用户批准，支持 spike/bounded/architectural 三种路径 |
+| frontend-slides | affaan-m | https://github.com/affaan-m/ECC | 创建动画丰富的 HTML 演示文稿，支持从零创建或 PPT/PPTX 转换，内置 12 种风格预设 |
 
 ## 目录结构
 
@@ -23,6 +24,14 @@
     ├── visual-companion.md     # 可视化辅助指南
     ├── spec-document-reviewer-prompt.md  # Spec 评审模板
     └── scripts/                # 可视化伴侣服务器脚本
+└── frontend-slides/            # HTML 演示文稿技能
+    ├── SKILL.md
+    ├── STYLE_PRESETS.md         # 12 种风格预设 + CSS 基础
+    ├── animation-patterns.md   # 动画模式参考
+    ├── html-template.md        # HTML 模板
+    ├── viewport-base.css        # 视口适配 CSS
+    ├── agents/openai.yaml      # OpenAI agent 配置
+    └── scripts/                # PDF 导出 + PPTX 提取脚本
 ```
 
 ## 如何在新设备上使用
