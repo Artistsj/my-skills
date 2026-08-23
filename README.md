@@ -18,6 +18,7 @@
 | risk-assessment | anthropics | https://github.com/anthropics/knowledge-work-plugins | 运营风险评估，识别、评估、规划缓解措施，含风险矩阵、6 大风险类别、风险登记册格式 |
 | investor-materials | affaan-m | https://github.com/affaan-m/ECC | 投资人材料生成，创建 pitch deck、one-pager、投资人备忘录、财务模型、加速器申请，确保多份融资材料数据一致 |
 | weather-reporter | awslabs | https://github.com/awslabs/agentcore-samples | 天气信息格式化，用 emoji 展示天气、双温标显示、基于天气的活动推荐和穿衣建议 |
+| diagram-maker | openclaw | https://github.com/openclaw/openclaw | 图表绘制，支持 SVG/HTML 架构图和 Excalidraw 手绘白板，自动选择布局和语义配色 |
 
 ## 目录结构
 
@@ -81,6 +82,9 @@
     └── agents/openai.yaml
 └── weather-reporter/             # 天气报告技能
     └── SKILL.md
+└── diagram-maker/               # 图表绘制技能
+    ├── SKILL.md
+    └── references/               # SVG 模板 + Excalidraw 模式参考
 ```
 
 ## 如何在新设备上使用
