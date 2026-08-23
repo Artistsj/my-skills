@@ -14,3 +14,8 @@ Thumbs.db
 
 # Trae uploads (temporary)
 .uploads/
+
+# Trae runtime artifacts (not part of skill repo)
+.trae/
+.trae-html-share-packages/
+skills-lock.json

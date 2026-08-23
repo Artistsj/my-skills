@@ -7,16 +7,22 @@
 | Skill 名称 | 作者 | 来源 | 说明 |
 | --- | --- | --- | --- |
 | ui-ux-pro-max | nextlevelbuilder | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | UI/UX 设计智能技能，覆盖风格、配色、字体、UX 规则、动画预设、图表推荐等 |
+| brainstorming | obra | https://github.com/obra/superpowers | 创意头脑风暴技能，在实现任何功能前先探索需求、设计方案、获取用户批准，支持 spike/bounded/architectural 三种路径 |
 
 ## 目录结构
 
 ```
 .agents/skills/
-└── ui-ux-pro-max/          # Skill 根目录
-    ├── SKILL.md            # 技能核心指令
-    ├── data/               # 本地数据集（风格、色板、字体等）
-    ├── references/         # 参考文档
-    └── scripts/            # 搜索脚本
+├── ui-ux-pro-max/              # UI/UX 设计技能
+│   ├── SKILL.md
+│   ├── data/                   # 数据集（风格、色板、字体等）
+│   ├── references/             # 参考文档
+│   └── scripts/                # 搜索脚本
+└── brainstorming/              # 头脑风暴技能
+    ├── SKILL.md
+    ├── visual-companion.md     # 可视化辅助指南
+    ├── spec-document-reviewer-prompt.md  # Spec 评审模板
+    └── scripts/                # 可视化伴侣服务器脚本
 ```
 
 ## 如何在新设备上使用
