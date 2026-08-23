@@ -11,6 +11,7 @@
 | frontend-slides | affaan-m | https://github.com/affaan-m/ECC | 创建动画丰富的 HTML 演示文稿，支持从零创建或 PPT/PPTX 转换，内置 12 种风格预设 |
 | skill-creator | anthropics | https://github.com/anthropics/skills | 创建、修改和优化 Skill 的元技能，支持测试用例、评估基准、描述优化 |
 | ppt-generation | bytedance | https://github.com/bytedance/deer-flow | AI 图片生成 + PPTX 组装，逐张生成幻灯片图片并合成 PowerPoint 文件 |
+| vercel-react-best-practices | vercel-labs | https://github.com/vercel-labs/agent-skills | React/Next.js 性能优化规则集，70 条规则覆盖 8 个类别（异步瀑布、包体积、SSR、重渲染等） |
 
 ## 目录结构
 
@@ -45,6 +46,11 @@
 └── ppt-generation/              # PPT 生成技能（AI 图片 + PPTX 组装）
     ├── SKILL.md
     └── scripts/generate.py      # PPTX 组装脚本
+└── vercel-react-best-practices/  # React/Next.js 性能优化技能
+    ├── SKILL.md
+    ├── AGENTS.md                 # 编译后的完整规则文档
+    ├── metadata.json             # 版本元数据
+    └── rules/                    # 70 条规则文件（8 个类别）
 ```
 
 ## 如何在新设备上使用
