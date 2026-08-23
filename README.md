@@ -28,6 +28,7 @@
 | domain-modeling | mattpocock | https://github.com/mattpocock/skills | 项目领域模型构建，维护 CONTEXT.md 术语表和 ADR 决策记录，支持单/多上下文仓库 |
 | handoff | mattpocock | https://github.com/mattpocock/skills | 将当前对话压缩成交接文档，含推荐 skill、敏感信息脱敏，供下一个 agent 无缝接手 |
 | prototype | mattpocock | https://github.com/mattpocock/skills | 一次性原型验证，逻辑原型（HTML 状态机演示）+ UI 原型（多变体路由切换），验证后吸收决策、丢弃代码 |
+| web-design-guidelines | vercel-labs | https://github.com/vercel-labs/agent-skills | Web 界面设计审查，实时拉取 vercel-labs/web-interface-guidelines 最新规则，按 file:line 格式输出合规问题 |
 
 ## 目录结构
 
@@ -154,6 +155,8 @@
     ├── LOGIC.md                   # 逻辑原型：单 HTML 文件状态机演示+引导走查
     ├── UI.md                      # UI 原型：多变体路由切换+浮动底栏
     └── agents/openai.yaml         # Codex 平台元数据
+└── web-design-guidelines/         # Web 界面设计审查
+    └── SKILL.md                   # 实时拉取 vercel-labs/web-interface-guidelines 规则
 ```
 
 ## 如何在新设备上使用
