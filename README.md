@@ -23,6 +23,7 @@
 | fortune | ai-freer | https://github.com/ai-freer/fortune-skill | 中国传统命理分析（八字+紫微斗数），对话式收集出生信息，排盘脚本获取精确数据，结合九本经典典籍综合分析 |
 | grill-me | mattpocock | https://github.com/mattpocock/skills | 计划/设计淬炼面试入口，重定向到 grilling 会话 |
 | grilling | mattpocock | https://github.com/mattpocock/skills | relentless interview 核心引擎，设计树+frontier 逐轮拷问，自动分离事实查找与决策，直到达成共识 |
+| find-skills | vercel-labs | https://github.com/vercel-labs/skills | 帮助发现和安装 agent skills，先查 skills.sh 排行榜，再 CLI 搜索，验证质量后推荐安装 |
 
 ## 目录结构
 
@@ -129,6 +130,8 @@
 └── grilling/                     # relentless interview 核心引擎
     ├── SKILL.md                   # 设计树+frontier 逐轮拷问方法论
     └── agents/openai.yaml         # Codex 平台元数据
+└── find-skills/                  # Skill 发现与安装助手
+    └── SKILL.md                   # skills.sh 排行榜 + CLI 搜索 + 质量验证流程
 ```
 
 ## 如何在新设备上使用
