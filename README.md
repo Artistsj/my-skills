@@ -16,6 +16,7 @@
 | frontend-design | anthropics | https://github.com/anthropics/skills | 前端视觉设计指导，强调独特性、排版、配色、动效的刻意选择，避免模板化默认风格 |
 | adversarial-ux-test | NousResearch | https://github.com/NousResearch/hermes-agent | 对抗式 UX 测试，扮演最挑剔用户发现体验痛点，经实用主义过滤后输出可执行工单 |
 | risk-assessment | anthropics | https://github.com/anthropics/knowledge-work-plugins | 运营风险评估，识别、评估、规划缓解措施，含风险矩阵、6 大风险类别、风险登记册格式 |
+| investor-materials | affaan-m | https://github.com/affaan-m/ECC | 投资人材料生成，创建 pitch deck、one-pager、投资人备忘录、财务模型、加速器申请，确保多份融资材料数据一致 |
 
 ## 目录结构
 
@@ -74,6 +75,9 @@
     └── SKILL.md
 └── risk-assessment/              # 运营风险评估技能
     └── SKILL.md
+└── investor-materials/           # 投资人材料技能
+    ├── SKILL.md
+    └── agents/openai.yaml
 ```
 
 ## 如何在新设备上使用
