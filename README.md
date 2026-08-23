@@ -37,6 +37,8 @@
 | market-daily-review | quantskills | https://github.com/quantskills/skill-market-daily-review | A股每日收盘复盘，从 Pandadata 获取数据，生成包含指数、市场宽度、行业概念、龙虎榜、北向资金等内容的中文报告 |
 | a-share-stock-dossier | quantskills | https://github.com/quantskills/skill-a-share-stock-dossier | A股个股尽调报告，输入股票代码生成包含公司画像、财务、分红资本运作、股东行为、质押解禁减持风险、资金面的可溯源中文报告 |
 | futures-deepview-analyst | quantskills | https://github.com/quantskills/skill-futures-deepview-analyst | 期货 DeepView 综合研判，覆盖席位持仓博弈、基差期限结构、仓单库存、虚实盘比、现货利润、跨期套利扫描 |
+| improve-claude-md | humanlayer | https://github.com/humanlayer/skills | 用 `<important if>` 条件块重写 CLAUDE.md，提升 AI 对指令的遵循度 |
+| show-me | humanlayer | https://github.com/humanlayer/skills | 用简洁图表、代码草图、Mermaid 和 HTML 制品可视化解释当前话题 |
 
 ## 目录结构
 
@@ -213,6 +215,10 @@
         ├── openai.yaml            # OpenAI 平台元数据
         ├── cursor-rule.mdc        # Cursor 规则
         └── portable-loader.md    # 便携加载器
+└── improve-claude-md/             # CLAUDE.md 优化
+    └── SKILL.md                   # 用 <important if> 条件块重写指令文件
+└── show-me/                      # 可视化解释
+    └── SKILL.md                   # 图表、代码草图、Mermaid、HTML 制品
 ```
 
 ## 如何在新设备上使用
