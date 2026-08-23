@@ -29,6 +29,7 @@
 | handoff | mattpocock | https://github.com/mattpocock/skills | 将当前对话压缩成交接文档，含推荐 skill、敏感信息脱敏，供下一个 agent 无缝接手 |
 | prototype | mattpocock | https://github.com/mattpocock/skills | 一次性原型验证，逻辑原型（HTML 状态机演示）+ UI 原型（多变体路由切换），验证后吸收决策、丢弃代码 |
 | web-design-guidelines | vercel-labs | https://github.com/vercel-labs/agent-skills | Web 界面设计审查，实时拉取 vercel-labs/web-interface-guidelines 最新规则，按 file:line 格式输出合规问题 |
+| diagnosing-bugs | mattpocock | https://github.com/mattpocock/skills | 硬 bug 诊断 6 阶段流程，先建反馈回路再假设，含 HITL 脚本模板、密钥脱敏、回归测试 |
 
 ## 目录结构
 
@@ -157,6 +158,10 @@
     └── agents/openai.yaml         # Codex 平台元数据
 └── web-design-guidelines/         # Web 界面设计审查
     └── SKILL.md                   # 实时拉取 vercel-labs/web-interface-guidelines 规则
+└── diagnosing-bugs/               # 硬 bug 诊断
+    ├── SKILL.md                   # 6 阶段流程：反馈回路→复现→假设→插桩→修复→清理
+    ├── scripts/hitl-loop.template.sh  # 人工操作回环脚本模板
+    └── agents/openai.yaml         # Codex 平台元数据
 ```
 
 ## 如何在新设备上使用
