@@ -39,6 +39,7 @@
 | futures-deepview-analyst | quantskills | https://github.com/quantskills/skill-futures-deepview-analyst | 期货 DeepView 综合研判，覆盖席位持仓博弈、基差期限结构、仓单库存、虚实盘比、现货利润、跨期套利扫描 |
 | improve-claude-md | humanlayer | https://github.com/humanlayer/skills | 用 `<important if>` 条件块重写 CLAUDE.md，提升 AI 对指令的遵循度 |
 | show-me | humanlayer | https://github.com/humanlayer/skills | 用简洁图表、代码草图、Mermaid 和 HTML 制品可视化解释当前话题 |
+| cangjie-skill | kangarooking | https://github.com/kangarooking/cangjie-skill | 把书/长视频/播客/课程里的方法论蒸馏成一组可执行的 Agent Skills（RIA-TV++ 七阶段流水线） |
 
 ## 目录结构
 
