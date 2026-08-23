@@ -21,6 +21,7 @@
 | diagram-maker | openclaw | https://github.com/openclaw/openclaw | 图表绘制，支持 SVG/HTML 架构图和 Excalidraw 手绘白板，自动选择布局和语义配色 |
 | accessibility | affaan-m | https://github.com/affaan-m/ECC | WCAG 2.2 Level AA 无障碍设计标准，跨平台（Web/iOS/Android）ARIA 映射、审计检查清单、反模式避坑 |
 | fortune | ai-freer | https://github.com/ai-freer/fortune-skill | 中国传统命理分析（八字+紫微斗数），对话式收集出生信息，排盘脚本获取精确数据，结合九本经典典籍综合分析 |
+| grill-me | mattpocock | https://github.com/mattpocock/skills | 计划/设计淬炼面试，通过 relentless interview 深度拷问方案，重定向到 grilling 会话（需配合 grilling skill 使用） |
 
 ## 目录结构
 
@@ -121,6 +122,9 @@
         ├── bazi.py, sizi.py, ...  # 排盘+分析 Python 代码
         ├── books/                 # 子平真诠、穷通宝鉴等典籍
         └── examples/             # 格局示例
+└── grill-me/                     # 计划/设计淬炼面试技能
+    ├── SKILL.md                   # 重定向到 /grilling 会话
+    └── agents/openai.yaml         # Codex 平台元数据
 ```
 
 ## 如何在新设备上使用
