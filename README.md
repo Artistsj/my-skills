@@ -19,6 +19,7 @@
 | investor-materials | affaan-m | https://github.com/affaan-m/ECC | 投资人材料生成，创建 pitch deck、one-pager、投资人备忘录、财务模型、加速器申请，确保多份融资材料数据一致 |
 | weather-reporter | awslabs | https://github.com/awslabs/agentcore-samples | 天气信息格式化，用 emoji 展示天气、双温标显示、基于天气的活动推荐和穿衣建议 |
 | diagram-maker | openclaw | https://github.com/openclaw/openclaw | 图表绘制，支持 SVG/HTML 架构图和 Excalidraw 手绘白板，自动选择布局和语义配色 |
+| accessibility | affaan-m | https://github.com/affaan-m/ECC | WCAG 2.2 Level AA 无障碍设计标准，跨平台（Web/iOS/Android）ARIA 映射、审计检查清单、反模式避坑 |
 
 ## 目录结构
 
