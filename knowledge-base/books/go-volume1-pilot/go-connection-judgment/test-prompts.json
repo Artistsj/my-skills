@@ -1,0 +1,45 @@
+[
+  {
+    "prompt": "我们收购了一家公司，怎么判断两边的业务有没有真正整合起来",
+    "expected_trigger": true,
+    "category": "should_invoke",
+    "notes": "典型的连接判断场景：收购后是否真的连为一体"
+  },
+  {
+    "prompt": "公司有三个产品线，都说自己是生态的一部分，它们真的协同吗",
+    "expected_trigger": true,
+    "category": "should_invoke",
+    "notes": "判断是真连接还是凑在一起"
+  },
+  {
+    "prompt": "两个部门在同一层楼办公，它们算一个团队吗",
+    "expected_trigger": false,
+    "category": "decoy",
+    "notes": "地理位置近不等于结构性连接"
+  },
+  {
+    "prompt": "围棋里两个子斜对角算不算连",
+    "expected_trigger": false,
+    "category": "decoy",
+    "notes": "事实性问题，不需要调用方法论 skill"
+  },
+  {
+    "prompt": "我们的业务是中心化的还是分散化的，各单元之间的关系是怎样的",
+    "expected_trigger": true,
+    "category": "boundary",
+    "notes": "边界模糊，但核心是判断连接关系"
+  },
+  {
+    "prompt": "怎么评估一个团队的生存空间有多大",
+    "expected_trigger": false,
+    "category": "decoy",
+    "trigger_alternative": "go-liberty-position",
+    "notes": "这是气的位置法则的场景，不是连接判断"
+  },
+  {
+    "prompt": "我们有两个独立团队，要不要合并成一个",
+    "expected_trigger": true,
+    "category": "should_invoke",
+    "notes": "判断要不要'接'——建立直接连接"
+  }
+]

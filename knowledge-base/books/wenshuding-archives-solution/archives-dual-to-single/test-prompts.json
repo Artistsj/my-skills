@@ -1,0 +1,66 @@
+{
+  "skill_name": "archives-dual-to-single",
+  "skill_title": "双套制向单套制过渡框架",
+  "version": "1.0",
+  "test_prompts": [
+    {
+      "id": "dual-001",
+      "prompt": "我们公司想从纸质档案转到电子档案，怎么规划比较好？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "档案数字化转型路径是双单过渡框架的核心应用场景"
+    },
+    {
+      "id": "dual-002",
+      "prompt": "什么是双套制、单套制？有什么区别？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了核心关键词'双套制'和'单套制'"
+    },
+    {
+      "id": "dual-003",
+      "prompt": "电子档案单套管理是什么意思？我们公司能做吗？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了'电子档案单套管理'"
+    },
+    {
+      "id": "dual-004",
+      "prompt": "电子档案怎么保证法律效力？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-four-tests",
+      "rationale": "这是四性检测框架的触发场景（法律效力），不是过渡路径问题"
+    },
+    {
+      "id": "dual-005",
+      "prompt": "档案系统需要哪些功能模块？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-lifecycle",
+      "rationale": "这是全生命周期框架的触发场景（功能规划），不是转型路径问题"
+    },
+    {
+      "id": "dual-006",
+      "prompt": "业务系统和档案系统怎么对接？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-yidang-yiti",
+      "rationale": "这是业档一体架构的触发场景，不是双单过渡问题"
+    },
+    {
+      "id": "dual-007",
+      "prompt": "存量纸质档案数字化和增量电子文件怎么衔接？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "存量数字化+增量电子化是双单过渡的第一步核心问题"
+    },
+    {
+      "id": "dual-008",
+      "prompt": "国家说要推行单套制，我们企业应该怎么跟上？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "政策驱动下的单套制推进是双单过渡框架的典型应用场景"
+    }
+  ]
+}
