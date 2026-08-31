@@ -40,6 +40,13 @@
 | improve-claude-md | humanlayer | https://github.com/humanlayer/skills | 用 `<important if>` 条件块重写 CLAUDE.md，提升 AI 对指令的遵循度 |
 | show-me | humanlayer | https://github.com/humanlayer/skills | 用简洁图表、代码草图、Mermaid 和 HTML 制品可视化解释当前话题 |
 | cangjie-skill | kangarooking | https://github.com/kangarooking/cangjie-skill | 把书/长视频/播客/课程里的方法论蒸馏成一组可执行的 Agent Skills（RIA-TV++ 七阶段流水线） |
+| archives-lifecycle | 文书定（泛微） | 《文书定-综合档案解决方案》 | 档案全生命周期管理框架（收管存用），规划档案管理系统功能架构和完整流程体系 |
+| archives-yidang-yiti | 文书定（泛微） | 《文书定-综合档案解决方案》 | 业档一体架构框架，设计业务系统与档案系统的融合方案，实现电子档案自动归档和双向闭环 |
+| archives-pre-archiving | 文书定（泛微） | 《文书定-综合档案解决方案》 | 预归档平台方法论，收集整理前置化，三级协作体系，从单兵作战到系统作战 |
+| archives-four-tests | 文书定（泛微） | 《文书定-综合档案解决方案》 | 四性检测框架（真实性/完整性/安全性/可用性），保障电子档案合规性和法律效力 |
+| archives-permissions | 文书定（泛微） | 《文书定-综合档案解决方案》 | 分级分权权限管理框架，全宗+门类多维度权限控制，适配集团型企业多组织架构 |
+| archives-access-control | 文书定（泛微） | 《文书定-综合档案解决方案》 | 档案利用控制框架，四层控制体系（检索/借阅/操作/内容），平衡档案安全与利用 |
+| archives-dual-to-single | 文书定（泛微） | 《文书定-综合档案解决方案》 | 双套制向单套制过渡框架，三步渐进路径（双套并行→逐步过渡→全面单套） |
 
 ## 目录结构
 
@@ -220,6 +227,20 @@
     └── SKILL.md                   # 用 <important if> 条件块重写指令文件
 └── show-me/                      # 可视化解释
     └── SKILL.md                   # 图表、代码草图、Mermaid、HTML 制品
+└── archives-lifecycle/           # 档案全生命周期管理（收管存用）
+    └── SKILL.md                   # 四阶段框架：收集→管理→保存→利用
+└── archives-yidang-yiti/         # 业档一体架构
+    └── SKILL.md                   # 业务系统与档案系统融合，双向闭环，自动归档
+└── archives-pre-archiving/       # 预归档平台
+    └── SKILL.md                   # 收集前置化 + 三级协作体系（业务人员/兼职/专职）
+└── archives-four-tests/          # 四性检测
+    └── SKILL.md                   # 真实性/完整性/安全性/可用性，贯穿全生命周期
+└── archives-permissions/         # 分级分权权限管理
+    └── SKILL.md                   # 全宗+门类多维度权限，适配集团型企业
+└── archives-access-control/      # 档案利用控制
+    └── SKILL.md                   # 四层控制：检索→借阅→操作→内容
+└── archives-dual-to-single/      # 双套制向单套制过渡
+    └── SKILL.md                   # 三步渐进路径：双套并行→逐步过渡→全面单套
 ```
 
 ## 如何在新设备上使用
@@ -233,7 +254,6 @@
 ```bash
 # 更新单个 Skill 到最新版
 npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max --agent trae -y --copy
-
 # 提交更新到本仓库
 git add -A
 git commit -m "update: ui-ux-pro-max"
