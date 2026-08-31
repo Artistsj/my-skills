@@ -1,0 +1,66 @@
+{
+  "skill_name": "archives-pre-archiving",
+  "skill_title": "预归档平台方法论",
+  "version": "1.0",
+  "test_prompts": [
+    {
+      "id": "pre-001",
+      "prompt": "档案员每天都要手工录入整理，工作量太大了，怎么提升效率？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "档案员效率问题是预归档方法论的典型触发场景（从单兵作战到系统作战）"
+    },
+    {
+      "id": "pre-002",
+      "prompt": "预归档是什么意思？有什么用？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了核心关键词'预归档'"
+    },
+    {
+      "id": "pre-003",
+      "prompt": "怎么让业务部门也参与档案工作，而不是全靠档案员一个人？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "业务部门参与档案工作、三级协作体系，是预归档的核心思想"
+    },
+    {
+      "id": "pre-004",
+      "prompt": "我们公司OA和档案系统是分开的，怎么实现自动归档？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-yidang-yiti",
+      "rationale": "这是业档一体架构的触发场景（系统对接自动归档），不是预归档的组织分工问题"
+    },
+    {
+      "id": "pre-005",
+      "prompt": "电子档案怎么保证不被篡改？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-four-tests",
+      "rationale": "这是四性检测框架的触发场景（防篡改），不是预归档问题"
+    },
+    {
+      "id": "pre-006",
+      "prompt": "集团有多个子公司，档案权限怎么设计？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-permissions",
+      "rationale": "这是分级分权权限管理的触发场景，不是预归档问题"
+    },
+    {
+      "id": "pre-007",
+      "prompt": "档案总是缺件，很多该归档的文件都没归档，怎么办？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "档案完整性差、缺件，是预归档要解决的核心问题之一（收集前置化保证完整性）"
+    },
+    {
+      "id": "pre-008",
+      "prompt": "什么是兼职档案员？他们应该做什么？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "兼职档案员是预归档三级协作体系中的关键角色"
+    }
+  ]
+}

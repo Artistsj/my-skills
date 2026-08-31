@@ -1,0 +1,66 @@
+{
+  "skill_name": "archives-permissions",
+  "skill_title": "分级分权权限管理框架",
+  "version": "1.0",
+  "test_prompts": [
+    {
+      "id": "perm-001",
+      "prompt": "我们集团有好几个子公司，档案权限怎么设计比较合理？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "集团多全宗权限设计是分级分权的典型触发场景"
+    },
+    {
+      "id": "perm-002",
+      "prompt": "分级分权是什么意思？档案权限怎么分级管理？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了核心关键词'分级分权'"
+    },
+    {
+      "id": "perm-003",
+      "prompt": "不同档案门类的权限不一样，人事档案要特别严格，怎么配置？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "按门类配置权限是分级分权框架的核心机制之一"
+    },
+    {
+      "id": "perm-004",
+      "prompt": "涉密档案怎么让业务部门在安全的前提下看需要的部分？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-access-control",
+      "rationale": "这是利用控制框架的触发场景（精细化内容控制），不是整体权限体系设计问题"
+    },
+    {
+      "id": "perm-005",
+      "prompt": "OA系统怎么对接档案系统实现自动归档？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-yidang-yiti",
+      "rationale": "这是业档一体架构的触发场景，不是权限管理问题"
+    },
+    {
+      "id": "perm-006",
+      "prompt": "档案员一个人忙不过来，怎么让各部门帮忙做档案工作？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-pre-archiving",
+      "rationale": "这是预归档方法论的触发场景（三级协作），不是权限体系设计问题"
+    },
+    {
+      "id": "perm-007",
+      "prompt": "全宗是什么意思？跟权限有什么关系？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "全宗是分级分权权限管理的基本组织单元，直接关联"
+    },
+    {
+      "id": "perm-008",
+      "prompt": "档案系统的权限管理方案怎么设计？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "档案权限方案设计是分级分权框架的典型应用场景"
+    }
+  ]
+}

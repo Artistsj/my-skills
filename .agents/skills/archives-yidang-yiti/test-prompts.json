@@ -1,0 +1,67 @@
+{
+  "skill_name": "archives-yidang-yiti",
+  "skill_title": "业档一体架构框架",
+  "version": "1.0",
+  "test_prompts": [
+    {
+      "id": "yidang-001",
+      "prompt": "我们公司的OA系统和档案系统是分开的，每次公文办结后都要人工导出再导入档案系统，太麻烦了，怎么实现自动归档？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "提到了业务系统(OA)与档案系统对接、自动归档，是业档一体的典型触发场景"
+    },
+    {
+      "id": "yidang-002",
+      "prompt": "业档一体是什么意思？跟普通的系统集成有什么区别？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了核心关键词'业档一体'"
+    },
+    {
+      "id": "yidang-003",
+      "prompt": "合同系统怎么和档案系统对接，才能实现合同自动归档？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "业务系统(合同)与档案系统对接自动归档，是业档一体的具体应用场景"
+    },
+    {
+      "id": "yidang-004",
+      "prompt": "档案员每天都要手工录入整理，太忙了，有什么办法提升效率？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-pre-archiving",
+      "rationale": "这是预归档方法论的触发场景（提升收集效率、从单兵作战到系统作战），不是业档一体架构问题"
+    },
+    {
+      "id": "yidang-005",
+      "prompt": "电子档案怎么保障法律效力，在法庭上能作为证据吗？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-four-tests",
+      "rationale": "这是四性检测框架的触发场景（电子档案法律效力），不是业档一体架构问题"
+    },
+    {
+      "id": "yidang-006",
+      "prompt": "我们集团有好几个子公司，每个子公司的档案怎么管理比较好？",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-permissions",
+      "rationale": "这是分级分权权限管理的触发场景（集团多全宗），不是业档一体架构问题"
+    },
+    {
+      "id": "yidang-007",
+      "prompt": "帮我设计一下档案管理系统的整体功能架构",
+      "expected_to_trigger": false,
+      "category": "decoy-other-skill",
+      "target_skill": "archives-lifecycle",
+      "rationale": "这是全生命周期管理框架的触发场景（功能规划），不是业档一体的系统集成问题"
+    },
+    {
+      "id": "yidang-008",
+      "prompt": "我们想做业务档案一体化，应该从哪里开始？",
+      "expected_to_trigger": true,
+      "category": "should-trigger",
+      "rationale": "直接提到了'业务档案一体化'，是业档一体的典型触发词"
+    }
+  ]
+}
