@@ -1,6 +1,7 @@
 # Skill 使用策略
 
-> 基于 33 个 skill 的 6 组冲突分析，制定明确的使用优先级和触发规则。
+> 基于 **41 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
+> 完整技能清单与触发词速查见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
 
 ---
 
@@ -82,6 +83,39 @@
 
 ---
 
+### 冲突 7：档案管理系列内部配合 — 7 个 archives-* skill 的分工
+
+档案系列 7 个技能不是竞争关系，而是**按档案管理阶段和维度分工**的配合体系：
+
+| 阶段/维度 | 使用 Skill | 触发场景 |
+|---|---|---|
+| 总纲 / 全流程规划 | `archives-lifecycle` | 做档案系统整体规划、梳理收管存用流程 |
+| 业务系统对接 / 自动归档 | `archives-yidang-yiti` | 业务系统与档案系统打通、电子文件自动归档 |
+| 收集前置 / 预归档 | `archives-pre-archiving` | 兼职档案员、收集整理前置、预归档流程 |
+| 权限体系 / 分级分权 | `archives-permissions` | 多全宗、按岗授权、门限权限、权限模型设计 |
+| 利用控制 / 安全借阅 | `archives-access-control` | 档案借阅审批、动态水印、原文遮盖、利用审计 |
+| 合规检测 / 四性检测 | `archives-four-tests` | 电子档案真实性/完整性/安全性/可用性检测、DA/T70 合规 |
+| 数字化转型 / 双套转单套 | `archives-dual-to-single` | 从纸质+电子双套制过渡到电子单套制的路径规划 |
+
+**规则**：
+- 做**整体规划**时先 `archives-lifecycle`（总纲），再按需深入具体阶段。
+- 做**系统建设**时按流水线：`archives-yidang-yiti`（对接）→ `archives-pre-archiving`（收集）→ `archives-permissions`（权限）→ `archives-access-control`（利用）→ `archives-four-tests`（合规）。
+- `archives-dual-to-single` 是**转型战略**，独立于日常运营，在数字化转型项目中单独使用。
+
+---
+
+### 冲突 8：技能创建 — cangjie-skill vs skill-creator vs find-skills
+
+| 场景 | 使用 Skill | 原因 |
+|---|---|---|
+| 从书/视频/课程中蒸馏技能 | `cangjie-skill` | 专门处理长内容的原子化蒸馏，产出可调用技能集 |
+| 从零创建/修改/评测一个技能 | `skill-creator` | 通用技能创建、优化、评测（evals/方差分析） |
+| 先看看有没有现成技能 | `find-skills` | 避免重复造轮子，先搜索再决定是否创建 |
+
+**规则**：创建新技能的标准流水线是 `find-skills`（先查有没有）→ 如果原料是书/课程用 `cangjie-skill`（蒸馏）→ 用 `skill-creator`（创建/优化/评测）。三者是"先查 → 再蒸馏 → 后创建"的配合关系。
+
+---
+
 ## 二、常用场景 Playbook
 
 ### 场景 A：从零做一个产品演示
@@ -147,10 +181,30 @@ tdd                        → 测试驱动修复
 ```
 find-skills               → 先搜索是否已有类似 skill
   ↓
+cangjie-skill             → 如原料是书/课程，先蒸馏
+  ↓
 skill-creator             → 创建/优化/评估新 skill
   ↓
 improve-claude-md         → 优化项目的 CLAUDE.md 指令
 ```
+
+### 场景 G：档案系统规划与建设
+
+```
+archives-lifecycle        → 总纲：梳理收管存用全流程
+  ↓
+archives-yidang-yiti     → 业档一体：业务系统对接与自动归档
+  ↓
+archives-pre-archiving    → 预归档：收集前置与三级协作
+  ↓
+archives-permissions      → 权限：分级分权与全宗管理
+  ↓
+archives-access-control   → 利用：借阅、水印、原文遮盖
+  ↓
+archives-four-tests       → 合规：四性检测与 DA/T70 把关
+```
+
+> 数字化转型项目额外使用 `archives-dual-to-single` 规划双套转单套路径。
 
 ---
 
@@ -171,6 +225,22 @@ improve-claude-md         → 优化项目的 CLAUDE.md 指令
 | "无障碍检查" / "WCAG" | accessibility | web-design-guidelines |
 | "改进架构" / "扫描架构" | improve-codebase-architecture | codebase-design |
 | "设计原则" / "模块设计" | codebase-design | improve-codebase-architecture |
+| "收管存用" / "档案系统规划" | archives-lifecycle | 其他 archives-* |
+| "业档一体" / "自动归档" | archives-yidang-yiti | archives-pre-archiving |
+| "预归档" / "兼职档案员" | archives-pre-archiving | archives-yidang-yiti |
+| "档案权限" / "分级分权" | archives-permissions | archives-access-control |
+| "档案借阅" / "水印" / "原文遮盖" | archives-access-control | archives-permissions |
+| "四性检测" / "档案合规" | archives-four-tests | 其他 archives-* |
+| "双套制" / "单套制" / "档案数字化转型" | archives-dual-to-single | 其他 archives-* |
+| "拆书" / "把书做成 skill" | cangjie-skill | skill-creator |
+| "创建 skill" / "评测 skill" | skill-creator | cangjie-skill |
+| "找技能" / "有没有做 X 的 skill" | find-skills | skill-creator |
+| "算命" / "八字" / "紫微" / "排盘" | fortune | （独立，无冲突） |
+| "A股复盘" / "收盘总结" | market-daily-review | a-share-stock-dossier |
+| "个股尽调" / "个股体检" | a-share-stock-dossier | market-daily-review |
+| "期货研判" / "主力合约" | futures-deepview-analyst | （独立） |
+| "融资 BP" / "投资人备忘录" | investor-materials | （独立） |
+| "风险评估" / "risk register" | risk-assessment | （独立） |
 
 ---
 
@@ -183,4 +253,4 @@ improve-claude-md         → 优化项目的 CLAUDE.md 指令
 | grill-me | 功能被 grill-with-docs 完全覆盖 | 保留但不主动触发 |
 | grilling | 作为 grill-with-docs 的内部依赖被自动调用 | 保留但不主动触发 |
 
-其余 31 个 skill 都有独立不可替代的功能，全部保留。
+其余 **39 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
