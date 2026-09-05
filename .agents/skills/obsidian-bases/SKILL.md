@@ -86,7 +86,7 @@ filters:
     - 'file.hasTag("book")'
     - 'file.hasTag("article")'
 
-# NOT - exclude matching notes
+# NOT - exclude matching items
 filters:
   not:
     - 'file.hasTag("archived")'
