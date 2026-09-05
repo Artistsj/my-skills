@@ -1,6 +1,6 @@
 # Skill 使用策略
 
-> 基于 **43 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
+> 基于 **44 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
 > 完整技能清单与触发词速查见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
 
 ---
@@ -129,16 +129,18 @@
 
 ---
 
-### 冲突 10：Obsidian 内分工 — obsidian-markdown vs obsidian-bases
+### 冲突 10：Obsidian 系列分工 — obsidian-markdown vs obsidian-bases vs obsidian-cli
 
 | 场景 | 使用 Skill | 原因 |
 |---|---|---|
-| 写/改普通 .md 笔记、双链、callout、frontmatter 属性、embed 嵌入 | obsidian-markdown | 处理 Obsidian Flavored Markdown 语法 |
-| 创建/编辑 .base 文件、数据库视图（table/cards/list/map） | obsidian-bases | 专管 Bases 的 YAML 结构：filters/formulas/properties/summaries/views |
+| 写/改普通 .md 笔记、双链、callout、frontmatter 属性、embed 嵌入 | obsidian-markdown | 处理 Obsidian Flavored Markdown 语法（写法知识，不执行命令） |
+| 创建/编辑 .base 文件、数据库视图（table/cards/list/map） | obsidian-bases | 专管 Bases 的 YAML 结构：filters/formulas/properties/summaries/views（写法知识，不执行命令） |
 | 在笔记里嵌入某个 base：`![[MyBase.base]]`、`![[X.base#视图名]]` | obsidian-bases | 嵌入对象是 .base，视图与语法配置由 bases 技能负责 |
-| 只写 `[[双链]]`、`> [!note]`、普通 Properties | obsidian-markdown | 不涉及 .base 文件，不触发 obsidian-bases |
+| 命令行读写/搜索 vault：read/create/append/search、daily、tasks、tags、backlinks、property:set | obsidian-cli | 需要实际调用本机 `obsidian` CLI 与运行中的 Obsidian 交互 |
+| 插件/主题开发调试：plugin:reload、dev:errors、dev:screenshot、dev:dom、dev:console、eval | obsidian-cli | 只有 CLI 能连接运行实例；写操作与 eval 执行 JS 需逐条确认 |
+| 只写 `[[双链]]`、`> [!note]`、普通 Properties | obsidian-markdown | 不涉及 .base、不需要命令行 |
 
-**规则**：按**目标文件类型**分流——`.md` 笔记找 obsidian-markdown，`.base` 数据库视图找 obsidian-bases。两者同源（kepano/obsidian-skills），可配合使用但不互相触发；标准 Markdown/YAML 基础语法不重复教学。
+**规则**：先分"产出文件内容"还是"动手操作运行中的 Obsidian"——写**语法/内容**用 obsidian-markdown（.md）或 obsidian-bases（.base）；要**通过命令行实际操作 vault 或调试插件**用 obsidian-cli（前提：本机已安装 Obsidian CLI 且 Obsidian 桌面端正在运行）。三者同源（kepano/obsidian-skills），可配合使用（如先用 bases 写好 .base 内容、再用 cli 落盘）但不互相触发；标准 Markdown/YAML 基础语法不重复教学。
 
 ---
 
@@ -261,8 +263,9 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | "拆书" / "把书做成 skill" | cangjie-skill | skill-creator |
 | "创建 skill" / "评测 skill" | skill-creator | cangjie-skill |
 | "找技能" / "有没有做 X 的 skill" | find-skills | skill-creator |
-| "写 Obsidian 笔记" / "双链" / "callout" / "frontmatter 属性" | obsidian-markdown | docx、obsidian-bases |
-| ".base 文件" / "Bases 视图" / "过滤器公式" / "数据库视图" / "summaries 汇总" | obsidian-bases | obsidian-markdown、docx |
+| "写 Obsidian 笔记" / "双链" / "callout" / "frontmatter 属性" | obsidian-markdown | docx、obsidian-bases、obsidian-cli |
+| ".base 文件" / "Bases 视图" / "过滤器公式" / "数据库视图" / "summaries 汇总" | obsidian-bases | obsidian-markdown、obsidian-cli、docx |
+| "obsidian 命令" / "命令行操作 vault" / "CLI 搜笔记" / "daily/tasks/tags/backlinks" / "插件调试" / "dev:screenshot" / "obsidian eval" | obsidian-cli | obsidian-markdown、obsidian-bases |
 | "写 Word 文档" / "生成 .docx" / "Word 排版" | docx | obsidian-markdown |
 | "算命" / "八字" / "紫微" / "排盘" | fortune | （独立，无冲突） |
 | "A股复盘" / "收盘总结" | market-daily-review | a-share-stock-dossier |
@@ -282,4 +285,4 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | grill-me | 功能被 grill-with-docs 完全覆盖 | 保留但不主动触发 |
 | grilling | 作为 grill-with-docs 的内部依赖被自动调用 | 保留但不主动触发 |
 
-其余 **41 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
+其余 **42 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
