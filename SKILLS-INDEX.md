@@ -1,6 +1,6 @@
 # my-skills 触发速查表 / SKILLS INDEX
 
-> 来源：github.com/Artistsj/my-skills（main · .agents/skills/）· 共 **43 个技能 / 9 大类**
+> 来源：github.com/Artistsj/my-skills（main · .agents/skills/）· 共 **44 个技能 / 9 大类**
 > 用法：在 AI 助手中说"用 XX skill 来做"，或直接说出下面的触发关键词，助手会匹配对应技能并按其框架执行。
 > 标记：★ = 核心旗舰技能；💤 = 已被同系列覆盖、策略中标注休眠（保留但不主动触发）。
 
@@ -15,6 +15,7 @@
 | 写 / 读 / 改 Word 文档 | `docx` |
 | 写 Obsidian 笔记 / 双链 callout frontmatter 语法 | `obsidian-markdown` |
 | 做 Obsidian Bases 数据库视图 / .base 文件 / 过滤器公式 | `obsidian-bases` |
+| 命令行操作 Obsidian 库 / 搜笔记 / 读写属性 / 插件调试 | `obsidian-cli` |
 | 设计界面、选色板字体、做设计系统 | `ui-ux-pro-max` ★ |
 | 定视觉方向 / 美学方法论 | `frontend-design` |
 | 审查 UI 代码是否符合规范 | `web-design-guidelines` |
@@ -110,7 +111,7 @@
 | `weather-reporter` | 天气、格式化天气、温度区间、活动建议 | 用表情、温度区间与活动建议格式化天气信息 |
 | `triage` | issue 分诊、PR 分诊、triage、分类 issue、外部 PR 处理 | 让 issue 与外部 PR 走分诊角色状态机，产出 agent 可用简报 |
 
-## ⑥ 演示与文档（5）
+## ⑥ 演示与文档（6）
 
 | 技能 | 触发关键词 / 场景 | 一句话功能 |
 |---|---|---|
@@ -119,6 +120,7 @@
 | `docx` | Word doc、word document、.docx、.dotx、报告、备忘录、信件、模板、目录页码 | Word(.docx/.dotx) 的创建、读取、编辑、套模板、修订与目录 |
 | `obsidian-markdown` | Obsidian 笔记、wikilink 双链、callout 标注、frontmatter/properties 属性、embed 嵌入、`![[]]`、Obsidian Flavored Markdown | 按 Obsidian 风味 Markdown 语法创建/编辑 .md 笔记（双链、嵌入、标注、属性、标签），来源 kepano/obsidian-skills |
 | `obsidian-bases` | .base 文件、Obsidian Bases、数据库视图、table/cards/list/map 视图、filters 过滤器、formulas 公式、summaries 汇总、`![[X.base]]` | 创建/编辑 Obsidian Bases（.base）文件：过滤器、公式、视图与汇总配置，来源 kepano/obsidian-skills |
+| `obsidian-cli` | obsidian 命令行、CLI 操作 vault、read/create/append/search、daily/tasks/tags/backlinks、property:set、插件主题开发调试、plugin:reload、dev:errors/screenshot/dom/console、obsidian eval | 通过 Obsidian CLI 与运行中的 Obsidian 交互：读写搜索笔记、管理任务属性、插件调试（需本机装 CLI 且 Obsidian 在线），来源 kepano/obsidian-skills |
 
 ## ⑦ 思辨拷问（3）
 
@@ -157,6 +159,6 @@
 
 ## 边界说明
 
-- **纯方法论/流程类**（档案系列、grill、brainstorming、tdd、handoff、skill-creator、frontend-design、web-design-guidelines、accessibility 等）：AI 助手可以在对话中直接按其框架执行。
-- **依赖本地脚本或外部接口**（`ui-ux-pro-max` 的 search.py、`fortune` 排盘脚本、金融 3 连的 Pandadata 接口、`docx`/`ppt-generation` 的文档生成库）：需要在本地 AI 助手环境（Claude Code / Cursor 等）里用 `uipro init --ai <平台>` 安装后才能真正跑脚本；对话中可以给出思路和框架，但不假装执行了原脚本。
-- 说"按 skill 来"或"用 XX skill"，助手会先在这 43 个里匹配再动手。
+- **纯方法论/流程类**（档案系列、grill、brainstorming、tdd、handoff、skill-creator、frontend-design、web-design-guidelines、accessibility、obsidian-markdown、obsidian-bases 等）：AI 助手可以在对话中直接按其框架执行。
+- **依赖本地脚本、外部接口或本机程序**（`ui-ux-pro-max` 的 search.py、`fortune` 排盘脚本、金融 3 连的 Pandadata 接口、`docx`/`ppt-generation` 的文档生成库、`obsidian-cli` 的 `obsidian` 命令行——需本机安装 Obsidian CLI 并保持 Obsidian 桌面端运行）：需要相应本地环境就绪后才能真正执行；对话中可以给出思路、命令和框架，但不假装已经执行了原脚本或原命令。
+- 说"按 skill 来"或"用 XX skill"，助手会先在这 44 个里匹配再动手。
