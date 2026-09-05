@@ -1,6 +1,6 @@
 # Skill 使用策略
 
-> 基于 **42 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
+> 基于 **43 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
 > 完整技能清单与触发词速查见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
 
 ---
@@ -67,7 +67,7 @@
 | 新项目设计阶段 | 两者配合 | 先 guidelines 审整体，再 accessibility 补无障碍 |
 | 已有页面合规修复 | accessibility | 针对性修复无障碍问题 |
 
-**规则**：先 web-design-guidelines 做全面审查，再 accessibility 做无障碍专项。两者是"先全面后专项"的配合关系。
+**规则**：先 web-design-guidelines 做全面审查，再 accessibility 做无障碍专项。"先全面后专项"的配合关系。
 
 ---
 
@@ -90,12 +90,12 @@
 | 阶段/维度 | 使用 Skill | 触发场景 |
 |---|---|---|
 | 总纲 / 全流程规划 | `archives-lifecycle` | 做档案系统整体规划、梳理收管存用流程 |
-| 业务系统对接 / 自动归档 | `archives-yidang-yiti` | 业务系统与档案系统打通、电子文件自动归档 |
-| 收集前置 / 预归档 | `archives-pre-archiving` | 兼职档案员、收集整理前置、预归档流程 |
-| 权限体系 / 分级分权 | `archives-permissions` | 多全宗、按岗授权、门限权限、权限模型设计 |
-| 利用控制 / 安全借阅 | `archives-access-control` | 档案借阅审批、动态水印、原文遮盖、利用审计 |
-| 合规检测 / 四性检测 | `archives-four-tests` | 电子档案真实性/完整性/安全性/可用性检测、DA/T70 合规 |
-| 数字化转型 / 双套转单套 | `archives-dual-to-single` | 从纸质+电子双套制过渡到电子单套制的路径规划 |
+| 业务系统对接 / 自动归档 | `archives-yidang-yiti` | 业档一体、业务档案一体化、电子文件自动归档 |
+| 收集前置 / 预归档 | `archives-pre-archiving` | 预归档、收集前置、兼职档案员 |
+| 权限体系 / 分级分权 | `archives-permissions` | 分级分权、全宗、按岗授权、门限权限 |
+| 利用控制 / 安全借阅 | `archives-access-control` | 动态水印、原文遮盖、借阅审批、利用审计 |
+| 合规检测 / 四性检测 | `archives-four-tests` | 真实/完整/安全/可用性检测、DA/T70 合规 |
+| 数字化转型 / 双套转单套 | `archives-dual-to-single` | 双套制过渡到电子单套制的路径 |
 
 **规则**：
 - 做**整体规划**时先 `archives-lifecycle`（总纲），再按需深入具体阶段。
@@ -108,9 +108,9 @@
 
 | 场景 | 使用 Skill | 原因 |
 |---|---|---|
-| 从书/视频/课程中蒸馏技能 | `cangjie-skill` | 专门处理长内容的原子化蒸馏，产出可调用技能集 |
-| 从零创建/修改/评测一个技能 | `skill-creator` | 通用技能创建、优化、评测（evals/方差分析） |
-| 先看看有没有现成技能 | `find-skills` | 避免重复造轮子，先搜索再决定是否创建 |
+| 从书/视频/课程中蒸馏技能 | cangjie-skill | 专门处理长内容的原子化蒸馏，产出可调用技能集 |
+| 从零创建/修改/评测一个技能 | skill-creator | 通用技能创建、优化、评测（evals/方差分析） |
+| 先看看有没有现成技能 | find-skills | 避免重复造轮子，先搜索再决定是否创建 |
 
 **规则**：创建新技能的标准流水线是 `find-skills`（先查有没有）→ 如果原料是书/课程用 `cangjie-skill`（蒸馏）→ 用 `skill-creator`（创建/优化/评测）。三者是"先查 → 再蒸馏 → 后创建"的配合关系。
 
@@ -126,6 +126,19 @@
 | 需要目录页码、修订、套 Word 模板 | docx | Word 排版能力，Markdown 不承担 |
 
 **规则**：按**目标文件格式**分流——产物留在 Obsidian 知识库里的纯文本笔记用 obsidian-markdown；需要交付 .docx 给他人用 Word 打开的用 docx。标准 Markdown 语法（标题、加粗、列表、表格）属于默认能力，两个 skill 都不重复教学。
+
+---
+
+### 冲突 10：Obsidian 内分工 — obsidian-markdown vs obsidian-bases
+
+| 场景 | 使用 Skill | 原因 |
+|---|---|---|
+| 写/改普通 .md 笔记、双链、callout、frontmatter 属性、embed 嵌入 | obsidian-markdown | 处理 Obsidian Flavored Markdown 语法 |
+| 创建/编辑 .base 文件、数据库视图（table/cards/list/map） | obsidian-bases | 专管 Bases 的 YAML 结构：filters/formulas/properties/summaries/views |
+| 在笔记里嵌入某个 base：`![[MyBase.base]]`、`![[X.base#视图名]]` | obsidian-bases | 嵌入对象是 .base，视图与语法配置由 bases 技能负责 |
+| 只写 `[[双链]]`、`> [!note]`、普通 Properties | obsidian-markdown | 不涉及 .base 文件，不触发 obsidian-bases |
+
+**规则**：按**目标文件类型**分流——`.md` 笔记找 obsidian-markdown，`.base` 数据库视图找 obsidian-bases。两者同源（kepano/obsidian-skills），可配合使用但不互相触发；标准 Markdown/YAML 基础语法不重复教学。
 
 ---
 
@@ -248,7 +261,8 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | "拆书" / "把书做成 skill" | cangjie-skill | skill-creator |
 | "创建 skill" / "评测 skill" | skill-creator | cangjie-skill |
 | "找技能" / "有没有做 X 的 skill" | find-skills | skill-creator |
-| "写 Obsidian 笔记" / "双链" / "callout" / "frontmatter 属性" | obsidian-markdown | docx |
+| "写 Obsidian 笔记" / "双链" / "callout" / "frontmatter 属性" | obsidian-markdown | docx、obsidian-bases |
+| ".base 文件" / "Bases 视图" / "过滤器公式" / "数据库视图" / "summaries 汇总" | obsidian-bases | obsidian-markdown、docx |
 | "写 Word 文档" / "生成 .docx" / "Word 排版" | docx | obsidian-markdown |
 | "算命" / "八字" / "紫微" / "排盘" | fortune | （独立，无冲突） |
 | "A股复盘" / "收盘总结" | market-daily-review | a-share-stock-dossier |
@@ -268,4 +282,4 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | grill-me | 功能被 grill-with-docs 完全覆盖 | 保留但不主动触发 |
 | grilling | 作为 grill-with-docs 的内部依赖被自动调用 | 保留但不主动触发 |
 
-其余 **40 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
+其余 **41 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
