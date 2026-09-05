@@ -1,6 +1,6 @@
 # Skill 使用策略
 
-> 基于 **41 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
+> 基于 **42 个 skill** 的冲突分析，制定明确的使用优先级和触发规则。
 > 完整技能清单与触发词速查见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
 
 ---
@@ -116,6 +116,19 @@
 
 ---
 
+### 冲突 9：文档写作格式 — obsidian-markdown vs docx
+
+| 场景 | 使用 Skill | 原因 |
+|---|---|---|
+| 在 Obsidian 库内新建/改写 .md 笔记 | obsidian-markdown | 输出 wikilink、callout、frontmatter、embed 等 Obsidian 风味语法 |
+| 处理双链 `[[]]`、标注 `> [!]`、Properties | obsidian-markdown | 这是 Obsidian 专属扩展，docx 不涉及 |
+| 生成/编辑 .docx / .dotx Word 文件 | docx | 输出 Office 原生格式，可在 Word/WPS 打开 |
+| 需要目录页码、修订、套 Word 模板 | docx | Word 排版能力，Markdown 不承担 |
+
+**规则**：按**目标文件格式**分流——产物留在 Obsidian 知识库里的纯文本笔记用 obsidian-markdown；需要交付 .docx 给他人用 Word 打开的用 docx。标准 Markdown 语法（标题、加粗、列表、表格）属于默认能力，两个 skill 都不重复教学。
+
+---
+
 ## 二、常用场景 Playbook
 
 ### 场景 A：从零做一个产品演示
@@ -153,7 +166,7 @@ codebase-design               → 查设计原则指导修改
   ↓
 grill-with-docs              → 拷问修改方案，产出 ADR
   ↓
-tdd                           → 测试驱动开发实现修改
+tdd                           → 测试驱动实现修改
 ```
 
 ### 场景 D：A股投研全流程
@@ -235,6 +248,8 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | "拆书" / "把书做成 skill" | cangjie-skill | skill-creator |
 | "创建 skill" / "评测 skill" | skill-creator | cangjie-skill |
 | "找技能" / "有没有做 X 的 skill" | find-skills | skill-creator |
+| "写 Obsidian 笔记" / "双链" / "callout" / "frontmatter 属性" | obsidian-markdown | docx |
+| "写 Word 文档" / "生成 .docx" / "Word 排版" | docx | obsidian-markdown |
 | "算命" / "八字" / "紫微" / "排盘" | fortune | （独立，无冲突） |
 | "A股复盘" / "收盘总结" | market-daily-review | a-share-stock-dossier |
 | "个股尽调" / "个股体检" | a-share-stock-dossier | market-daily-review |
@@ -253,4 +268,4 @@ archives-four-tests       → 合规：四性检测与 DA/T70 把关
 | grill-me | 功能被 grill-with-docs 完全覆盖 | 保留但不主动触发 |
 | grilling | 作为 grill-with-docs 的内部依赖被自动调用 | 保留但不主动触发 |
 
-其余 **39 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
+其余 **40 个 skill** 都有独立不可替代的功能，全部保留。完整清单见 [SKILLS-INDEX.md](./SKILLS-INDEX.md)。
